@@ -33,13 +33,12 @@ public class EnumerationServlet extends HttpServlet {
 //        session.setMaxInactiveInterval(60 * 60 * 24); //one day
         session.setMaxInactiveInterval(-1); // until the browser is closed
 
-        out.println(session.getMaxInactiveInterval());
-
         //invalidate session
         session.invalidate();
 
         //all session methods throw an IllegalStateException
         out.println(session.getMaxInactiveInterval());
+
     }
 
     @Override

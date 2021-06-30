@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Ch07SessionCookies" target="1.8" />
+      <module name="Ch07SessionCookies" target="10" />
     </bytecodeTargetLevel>
   </component>
 </project>
