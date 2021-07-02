@@ -36,9 +36,9 @@
         </tr>
     </table>
 
-<p><a href="session">Session</a></p>
+<p><a href="session?productCode=8601">Session</a></p>
 <p><a href="enumeration">Enumeration</a></p>
 <p><a href="cookieResponse">Cookie</a></p>
-
+<p><a href="invalidate">Invalidate Session</a></p>
 </body>
 </html>

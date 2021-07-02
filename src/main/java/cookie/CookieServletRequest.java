@@ -19,6 +19,7 @@ public class CookieServletRequest extends HttpServlet {
         Cookie[] cookies = request.getCookies();
         String cookieName = "userIdCookie";
         String cookieValue = "";
+
         for (Cookie cookie : cookies) {
             if (cookieName.equals((cookie.getName())))
                 cookieValue = cookie.getValue();

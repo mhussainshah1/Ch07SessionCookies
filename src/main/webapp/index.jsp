@@ -36,9 +36,10 @@
         </tr>
     </table>
 
-<p><a href="session">Session</a></p>
-<p><a href="enumeration">Enumeration</a></p>
-<p><a href="cookieResponse">Cookie</a></p>
-
+<p><a href="session?productCode=8601">Create Session</a></p>
+<p><a href="enumeration">Enumerate over Session</a></p>
+<p><a href="cookieResponse">Create Cookie</a></p>
+<p><a href="invalidate">Invalidate Session</a></p>
+<p><a href="threadSafe">Thread Safe</a></p>
 </body>
 </html>

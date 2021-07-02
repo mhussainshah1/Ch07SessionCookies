@@ -22,23 +22,20 @@ public class EnumerationServlet extends HttpServlet {
         HttpSession session = request.getSession();
         Enumeration<String> names = session.getAttributeNames();
         while (names.hasMoreElements()) {
-            out.println(names.nextElement());
+            String key = names.nextElement();
+            String value = (String) session.getAttribute(key);
+            out.println("EnumerationServlet key : " + key + " value: " + value);
         }
 
         //ID for a session
         String jSessionId = session.getId();
-        out.println("SessionServlet jSessionId: " + jSessionId);
+        out.println("EnumerationServlet jSessionId: " + jSessionId);
 
         //set the inactive interval for a session
-//        session.setMaxInactiveInterval(60 * 60 * 24); //one day
+        session.setMaxInactiveInterval(60 * 60 * 24); //one day
         session.setMaxInactiveInterval(-1); // until the browser is closed
 
-        //invalidate session
-        session.invalidate();
-
-        //all session methods throw an IllegalStateException
-        out.println(session.getMaxInactiveInterval());
-
+        out.println("EnumerationServlet :" + session.getMaxInactiveInterval());
     }
 
     @Override
