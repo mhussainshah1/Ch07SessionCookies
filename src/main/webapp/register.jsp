@@ -9,7 +9,7 @@
 
 <h1>Download Registration</h1>
 
-<p>To register for our downloads, enter your name and email address below. Then, click on the  Submit button.</p>
+<p>To register for our downloads, enter your name and email address below. Then, click on the Submit button.</p>
 
 <form action="download" method="post">
     <input type="hidden" name="action" value="registerUser">

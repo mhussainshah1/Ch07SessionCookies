@@ -1,8 +1,11 @@
 package practice.session;
 
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import practice.shopping.Cart;
 
 import java.io.IOException;
@@ -15,9 +18,9 @@ public class ThreadSafeServlet extends HttpServlet {
 
         Cart cart;
         final Object lock = session.getId().intern();
-        synchronized (lock){
+        synchronized (lock) {
             cart = (Cart) session.getAttribute("cart");
-            session.setAttribute("cart" , cart);
+            session.setAttribute("cart", cart);
         }
     }
 

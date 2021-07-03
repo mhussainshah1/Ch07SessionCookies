@@ -29,5 +29,10 @@
         </td>
     </tr>
 </table>
+
+<p><a href="?action=viewAlbums">View list of albums</a></p>
+
+<p><a href="?action=viewCookies">View all cookies</a></p>
+
 </body>
 </html>
