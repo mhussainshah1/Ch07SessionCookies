@@ -1,23 +1,20 @@
-package session;
+package cookie;
 
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
-import shopping.Cart;
 
 import java.io.IOException;
 
-@WebServlet(name = "ThreadSafeServlet", value = "/threadSafe")
-public class ThreadSafeServlet extends HttpServlet {
+@WebServlet(name = "DeleteCookieServlet", value = "/deleteCookie")
+public class DeleteCookieServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession();
-
-        Cart cart;
-        final Object lock = session.getId().intern();
-        synchronized (lock){
-            cart = (Cart) session.getAttribute("cart");
-            session.setAttribute("cart" , cart);
+        Cookie[] cookies = request.getCookies();
+        for(Cookie cookie: cookies){
+            cookie.setMaxAge(0);
+            cookie.setPath("/");
+            response.addCookie(cookie);
         }
     }
 

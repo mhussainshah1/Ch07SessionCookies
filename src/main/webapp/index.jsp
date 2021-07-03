@@ -1,3 +1,4 @@
+<%@ page import="java.io.PrintWriter" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -7,6 +8,9 @@
     <link rel="stylesheet" href="styles/main.css" type="text/css"/>
 </head>
 <body>
+<%
+    out.println("<h1>hi</h1>");
+%>
 <h1>CD list</h1>
     <table>
         <tr>
@@ -39,6 +43,7 @@
 <p><a href="session?productCode=8601">Create Session</a></p>
 <p><a href="enumeration">Enumerate over Session</a></p>
 <p><a href="cookieResponse">Create Cookie</a></p>
+<p><a href="deleteCookie">Delete Cookie</a></p>
 <p><a href="invalidate">Invalidate Session</a></p>
 <p><a href="threadSafe">Thread Safe</a></p>
 </body>

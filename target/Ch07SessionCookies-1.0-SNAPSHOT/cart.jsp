@@ -14,7 +14,7 @@
     <link href="styles/main.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<h1>Your shopping.Cart</h1>
+<h1>Your Shopping Cart</h1>
 <table>
     <tr>
         <th>Quantiry</th>
