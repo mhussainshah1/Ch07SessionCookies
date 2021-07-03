@@ -1,50 +1,25 @@
-<%@ page import="java.io.PrintWriter" %>
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<!DOCTYPE html>
+<%--
+  Created by IntelliJ IDEA.
+  User: Owner
+  Date: 7/3/2021
+  Time: 7:42 AM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <title>Murach's Java Servlets and JSP</title>
-    <link rel="stylesheet" href="styles/main.css" type="text/css"/>
+    <link rel="stylesheet" href="styles/main.css" type="text/css">
 </head>
 <body>
-<%
-    out.println("<h1>hi</h1>");
-%>
-<h1>CD list</h1>
-    <table>
-        <tr>
-            <th>Description</th>
-            <th>Price</th>
-            <th></th>
-        </tr>
-        <tr>
-            <td>86 (the band) - True Life Songs and Pictures</td>
-            <td class="align_right">$14.95</td>
-            <td><input type="submit" value="Add To shopping Cart"></td>
-        </tr>
-        <tr>
-            <td>Paddlefoot-The first CD</td>
-            <td class="align_right">$12.95</td>
-            <td><input type="submit" value="Add To shopping Cart"></td>
-        </tr>
-        <tr>
-            <td>Paddlefoot - The second CD</td>
-            <td class="align_right">$14.95</td>
-            <td><input type="submit" value="Add To shopping Cart"></td>
-        </tr>
-        <tr>
-            <td>Joe Rut - Genuine Wood Grained Finish</td>
-            <td>$14.95</td>
-            <td><input type="submit" value="Add To shopping Cart"></td>
-        </tr>
-    </table>
+<h1>List of albums</h1>
 
-<p><a href="session?productCode=8601">Create Session</a></p>
-<p><a href="enumeration">Enumerate over Session</a></p>
-<p><a href="cookieResponse">Create Cookie</a></p>
-<p><a href="deleteCookie">Delete Cookie</a></p>
-<p><a href="invalidate">Invalidate Session</a></p>
-<p><a href="threadSafe">Thread Safe</a></p>
+<p>
+    <a href="download?action=checkUser&amp;productCode=8601"> 86 (the band) - True Life Songs and Pictures</a> <br>
+    <a href="download?action=checkUser&amp;productCode=pf01"> Paddlefoot - The First CD</a><br>
+    <a href="download?action=checkUser&amp;productCode=pf02"> Paddlefoot - The Second CD</a><br>
+    <a href="download?action=checkUser&amp;productCode=jr01"> Joe Rut - Genuine Wood Grained Finish</a>
+</p>
 </body>
 </html>
